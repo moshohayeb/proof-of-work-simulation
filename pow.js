@@ -66,6 +66,7 @@ function verifyChain(chain) {
 
         if (curr.header.prevHash != prev.hash) {
             console.log("ERR: prev hash %s != %s (height: %d)", curr.header.prevHash, prev.hash, curr.header.height);
+            return false;
         }
     }
 
